@@ -1,0 +1,92 @@
+---------- LOGIN PAGE ----------
+    <html>
+    <head>
+        <title>Login</title>
+        <style>
+            body { background:#f2f2f2; font-family:Arial; }
+            .box { width:350px; margin:100px auto; padding:25px;
+                   background:white; border-radius:8px; text-align:center; }
+            input, button { width:100%; padding:10px; margin:8px 0; }
+            button { background:#007BFF; color:white; border:none; }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h2>Login</h2>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="location.href='/dashboard'">Login</button>
+            <p>New user? <a href="/register">Register</a></p>
+        </div>
+    </body>
+    </html>
+    '''
+
+---------- REGISTER PAGE ----------
+    <html>
+    <head>
+        <title>Register</title>
+        <style>
+            body { background:#f2f2f2; font-family:Arial; }
+            .box { width:350px; margin:100px auto; padding:25px;
+                   background:white; border-radius:8px; text-align:center; }
+            input, button { width:100%; padding:10px; margin:8px 0; }
+            button { background:#28a745; color:white; border:none; }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h2>Register</h2>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="location.href='/'">Register</button>
+        </div>
+    </body>
+    </html>
+    '''
+
+---------- DASHBOARD (UPLOAD IMAGE) ----------
+    <html>
+    <head>
+        <title>DFU Prediction</title>
+        <style>
+            body { background:#f2f2f2; font-family:Arial; }
+            .box { width:350px; margin:100px auto; padding:25px;
+                   background:white; border-radius:8px; text-align:center; }
+            input, button { width:100%; padding:10px; margin:8px 0; }
+            button { background:#007BFF; color:white; border:none; }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h2>Upload Foot Image</h2>
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" required>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    </body>
+    </html>
+    '''
+
+---------- RESULT PAGE ----------
+    <html>
+    <head>
+        <title>Result</title>
+        <style>
+            body { background:#f2f2f2; font-family:Arial; }
+            .box { width:350px; margin:100px auto; padding:25px;
+                   background:white; border-radius:8px; text-align:center; }
+            a { text-decoration:none; color:#007BFF; }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h2>Prediction Result</h2>
+            <p><b>Result:</b> Abnormal (Ulcer Detected)</p>
+            <p><b>Confidence:</b> 96%</p>
+            <a href="/dashboard">Check Another Image</a>
+        </div>
+    </body>
+    </html>
